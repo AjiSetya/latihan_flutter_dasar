@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Login1.dart';
 import 'WaChatItem.dart';
 import 'CardImage.dart';
+import 'ListHewan.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
 void main() =>
@@ -54,13 +55,32 @@ class MyApp extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10.0)),
                 color: Colors.deepPurple,
                 child: Text(
-                  "WhatsApp Chat List Item",
+                  "ChatList HardCore",
                   style: TextStyle(color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => WaChatItem()));
                 }),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 8.0, top: 4.0, right: 8.0, bottom: 4.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                GradientButton(
+                  increaseWidthBy: 10000.0,
+                  child: Text("List Hewan"),
+                  callback: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ListHewan()));
+                  },
+                  gradient: Gradients.hotLinear,
+                  shadowColor: Gradients.hotLinear.colors.last.withOpacity(0.3),
+                ),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(
