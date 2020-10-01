@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Login1.dart';
+import 'Login2.dart';
 import 'WaChatItem.dart';
 import 'CardImage.dart';
 import 'ListHewan.dart';
@@ -45,7 +46,10 @@ class MyApp extends StatelessWidget {
                   "Login 2",
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login2()));
+                }),
           ),
           Padding(
             padding: const EdgeInsets.only(
