@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan_layout/pageview.dart';
 import 'Login1.dart';
 import 'Login2.dart';
 import 'WaChatItem.dart';
@@ -98,6 +99,25 @@ class MyApp extends StatelessWidget {
                   callback: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => CardImage()));
+                  },
+                  gradient: Gradients.hotLinear,
+                  shadowColor: Gradients.hotLinear.colors.last.withOpacity(0.3),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 8.0, top: 4.0, right: 8.0, bottom: 4.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                GradientButton(
+                  increaseWidthBy: 10000.0,
+                  child: Text("Page View"),
+                  callback: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => PageView1()));
                   },
                   gradient: Gradients.hotLinear,
                   shadowColor: Gradients.hotLinear.colors.last.withOpacity(0.3),
