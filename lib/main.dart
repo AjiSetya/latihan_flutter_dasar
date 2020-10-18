@@ -7,6 +7,8 @@ import 'CardImage.dart';
 import 'ListHewan.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
+import 'hero_animation.dart';
+
 void main() =>
     runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
 
@@ -124,6 +126,22 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 8.0, top: 4.0, right: 8.0, bottom: 4.0),
+            child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                color: Colors.green,
+                child: Text(
+                  "Hero Animation",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => HeroAnimation()));
+                }),
           ),
         ],
       ),
