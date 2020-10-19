@@ -4,6 +4,7 @@ import 'Login2.dart';
 import 'WaChatItem.dart';
 import 'CardImage.dart';
 import 'ListHewan.dart';
+import 'MoviePage.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
 
 void main() =>
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.teal,
         title: Text("Latihan Layout"),
       ),
       body: ListView(
@@ -98,6 +99,25 @@ class MyApp extends StatelessWidget {
                   callback: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => CardImage()));
+                  },
+                  gradient: Gradients.hotLinear,
+                  shadowColor: Gradients.hotLinear.colors.last.withOpacity(0.3),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(
+                left: 8.0, top: 4.0, right: 8.0, bottom: 4.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                GradientButton(
+                  increaseWidthBy: 10000.0,
+                  child: Text("Movie Page"),
+                  callback: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => MoviePage()));
                   },
                   gradient: Gradients.hotLinear,
                   shadowColor: Gradients.hotLinear.colors.last.withOpacity(0.3),
