@@ -143,9 +143,9 @@ class MyApp extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HeroAnimation()));
                 }
-            //hactoberfest
             ),
           ),
+              //hactoberfest
         ],
       ),
     );
